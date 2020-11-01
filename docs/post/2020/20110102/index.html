@@ -24,7 +24,7 @@
     <h1>IntelのGPUでffmpegハードウェアエンコード</h1>
     <time datetime="2020-11-01T15:30:05&#43;09:00">November 01, 2020</time>
   </header>
-  <p>なぜか勘違いしていたが、IntelのGPU <code>Intel UHD Graphics</code>でもハードウェアエンコードはできる。ハードウェアエンコード=NVIDIAを使う記事ばかりヒットするので、NVIDIAのGPUが搭載されていないとハードウェアエンコードできないと勘違いしていたが、ちゃんとIntelのGPUでも可能だ。</p>
+  <p>ハードウェアエンコード=NVIDIAを使う記事ばかりヒットするので、NVIDIAのGPUが搭載されていないとハードウェアエンコードできないと勘違いしていたが、、IntelのGPU <code>Intel UHD Graphics</code>でもハードウェアエンコードはできる。</p>
 <p>ffmpeg のエンコーダー・デコーダーの一覧に <code>h264_qsv</code> (Intel Quick Sync Video acceleration) があれば利用可能。無ければ、ffmpegのリビルドが必要とのこと。</p>
 <p><code>ffmpeg -encoders &gt; encoders.txt</code></p>
 <pre><code class="language-plane" data-lang="plane">
