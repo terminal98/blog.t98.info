@@ -1,0 +1,5 @@
+baseURL = "https://blog.t98.info/"
+publishDir = "docs"
+languageCode = "ja-jp"
+title = "blog.t98.info"
+theme = "contrast-hugo"

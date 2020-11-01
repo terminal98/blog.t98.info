@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog.t98.info</title>
+    <link>https://blog.t98.info/</link>
+    <description>Recent content on blog.t98.info</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Sun, 01 Nov 2020 14:43:40 +0900</lastBuildDate><atom:link href="https://blog.t98.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windowsのバッチファイルで文字コードが違うプログラムを共存させるには文字コードをchcpで指定する</title>
+      <link>https://blog.t98.info/post/2020/20110101/</link>
+      <pubDate>Sun, 01 Nov 2020 14:43:40 +0900</pubDate>
+      
+      <guid>https://blog.t98.info/post/2020/20110101/</guid>
+      <description>文字化けしていたのが気になっていた バッチファイルから外部CUIプログラムを呼び出す際、内部文字コードがUTF-8のものの場合、文字化けが発生することがあります。
+それなら、バッチファイルの文字コードをUTF-8にすれば解決するのではと思いましたが、逆にバッチファイルが文字化けしてしまいました。 日本語環境のWindowsで動かすバッチファイルは、原則Shift JISであるべきだからのようです1。
+chcpで文字コードの指定ができるようだ chcp というコマンドを使うことで、文字コードの指定ができるようです。 試しに、外部プログラムを呼び出す直線直後をUTF-8、それ以外をShift JISにするようにしてみました…。
+chcp 932 echo ======================================================== echo テストプログラム v1.0 :start echo ======================================================== echo. set /P pause=&amp;#34;: 続行するには何かキーを押してください：&amp;#34; chcp 65001 ExampleCuiProgram chcp 932 echo プログラムが完了しました。 set /P pause=&amp;#34;: 終了するには何かキーを押してください：&amp;#34; chcp 932 がShift JIS、 chcp 65001 がUTF-8に対応します。その他の文字コードや、コマンドの使い方については、文字コードの設定(CHCP) | コマンドプロンプトの使い方 に載っていますので、参考にしてください。
+動作として、linuxのresetのような挙動で動きます。
+「テストプログラム」と、キーを押下させる指示を表示したあと、外部のCUIプログラムを呼び出すわけですが、この行が走ったあと、一旦出力がリセットされます。 CUIプログラムの処理が終わったら、また出力がリセットされて、「完了しました」表示がされます。
+  バッチファイルの文字コードは？: Windows Script Programming &amp;#x21a9;&amp;#xfe0e;
+   </description>
+    </item>
+    
+  </channel>
+</rss>

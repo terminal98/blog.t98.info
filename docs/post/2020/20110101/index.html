@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<title>Windowsのバッチファイルで文字コードが違うプログラムを共存させるには文字コードをchcpで指定する | blog.t98.info</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.77.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://blog.t98.info/css/index.css">
+<link rel="stylesheet" href="https://blog.t98.info/css/classes.css">
+<link rel="canonical" href="https://blog.t98.info/post/2020/20110101/">
+<link rel="alternate" type="application/rss+xml" href="" title="blog.t98.info">
+
+<body>
+
+<header class="icons">
+  
+    <a href="https://blog.t98.info/">blog.t98.info</a>
+  
+  
+  
+</header>
+
+<article>
+  <header>
+    <h1>Windowsのバッチファイルで文字コードが違うプログラムを共存させるには文字コードをchcpで指定する</h1>
+    <time datetime="2020-11-01T14:43:40&#43;09:00">November 01, 2020</time>
+  </header>
+  <h2 id="文字化けしていたのが気になっていた">文字化けしていたのが気になっていた</h2>
+<p>バッチファイルから外部CUIプログラムを呼び出す際、内部文字コードがUTF-8のものの場合、文字化けが発生することがあります。</p>
+<p>それなら、バッチファイルの文字コードをUTF-8にすれば解決するのではと思いましたが、逆にバッチファイルが文字化けしてしまいました。
+日本語環境のWindowsで動かすバッチファイルは、原則Shift JISであるべきだからのようです<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>。</p>
+<h2 id="chcpで文字コードの指定ができるようだ">chcpで文字コードの指定ができるようだ</h2>
+<p><code>chcp</code> というコマンドを使うことで、文字コードの指定ができるようです。
+試しに、外部プログラムを呼び出す直線直後をUTF-8、それ以外をShift JISにするようにしてみました…。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash:example_inc_ja.bat" data-lang="bash:example_inc_ja.bat">chcp 932
+<span style="color:#66d9ef">echo</span>   ========================================================
+<span style="color:#66d9ef">echo</span>                        テストプログラム v1.0
+:start
+<span style="color:#66d9ef">echo</span>   ========================================================
+<span style="color:#66d9ef">echo</span>.
+<span style="color:#66d9ef">set</span> <span style="color:#66d9ef">/P</span> pause=<span style="color:#e6db74">&#34;:   続行するには何かキーを押してください：&#34;</span>
+chcp 65001
+ExampleCuiProgram
+chcp 932
+<span style="color:#66d9ef">echo</span> プログラムが完了しました。
+<span style="color:#66d9ef">set</span> <span style="color:#66d9ef">/P</span> pause=<span style="color:#e6db74">&#34;:   終了するには何かキーを押してください：&#34;</span>
+</code></pre></div><p><code>chcp 932</code> がShift JIS、 <code>chcp 65001</code> がUTF-8に対応します。その他の文字コードや、コマンドの使い方については、<a href="https://www.adminweb.jp/command/display/index5.html">文字コードの設定(CHCP) | コマンドプロンプトの使い方</a> に載っていますので、参考にしてください。</p>
+<p>動作として、linuxの<code>reset</code>のような挙動で動きます。<br>
+「テストプログラム」と、キーを押下させる指示を表示したあと、外部のCUIプログラムを呼び出すわけですが、この行が走ったあと、一旦出力がリセットされます。
+CUIプログラムの処理が終わったら、また出力がリセットされて、「完了しました」表示がされます。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="http://scripting.cocolog-nifty.com/blog/2008/12/post-38f8.html">バッチファイルの文字コードは？: Windows Script Programming</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</article>
+
+
+
+</body>
+
+</html>
