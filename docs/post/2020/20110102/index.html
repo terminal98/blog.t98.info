@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja-jp">
+<title>IntelのGPUでffmpegハードウェアエンコード | blog.t98.info</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.77.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://blog.t98.info/css/index.css">
+<link rel="stylesheet" href="https://blog.t98.info/css/classes.css">
+<link rel="canonical" href="https://blog.t98.info/post/2020/20110102/">
+<link rel="alternate" type="application/rss+xml" href="" title="blog.t98.info">
+
+<body>
+
+<header class="icons">
+  
+    <a href="https://blog.t98.info/">blog.t98.info</a>
+  
+  
+  
+</header>
+
+<article>
+  <header>
+    <h1>IntelのGPUでffmpegハードウェアエンコード</h1>
+    <time datetime="2020-11-01T15:30:05&#43;09:00">November 01, 2020</time>
+  </header>
+  <p>なぜか勘違いしていたが、IntelのGPU <code>Intel UHD Graphics</code>でもハードウェアエンコードはできる。ハードウェアエンコード=NVIDIAを使う記事ばかりヒットするので、NVIDIAのGPUが搭載されていないとハードウェアエンコードできないと勘違いしていたが、ちゃんとIntelのGPUでも可能だ。</p>
+<p>ffmpeg のエンコーダー・デコーダーの一覧に <code>h264_qsv</code> (Intel Quick Sync Video acceleration) があれば利用可能。無ければ、ffmpegのリビルドが必要とのこと。</p>
+<p><code>ffmpeg -encoders &gt; encoders.txt</code></p>
+<pre><code class="language-plane" data-lang="plane">
+ V..... libx264              libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (codec h264)
+ V..... libx264rgb           libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 RGB (codec h264)
+ V..... h264_amf             AMD AMF H.264 Encoder (codec h264)
+ V..... h264_nvenc           NVIDIA NVENC H.264 encoder (codec h264)
+ V..... h264_qsv             H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (Intel Quick Sync Video acceleration) (codec h264)
+ V..... nvenc                NVIDIA NVENC H.264 encoder (codec h264)
+ V..... nvenc_h264           NVIDIA NVENC H.264 encoder (codec h264)
+
+</code></pre><p><code>ffmpeg -decoders &gt; decoders.txt</code></p>
+<pre><code class="language-plane" data-lang="plane">
+ VFS..D h264                 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+ V....D h264_qsv             H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (Intel Quick Sync Video acceleration) (codec h264)
+ V..... h264_cuvid           Nvidia CUVID H264 decoder (codec h264)
+
+</code></pre><p>動画を処理する際は、<code>vcodec</code> を <code>h264_qsv</code> に指定すれば、GPUでエンコード処理をしてくれる。</p>
+<p>Example:
+<code>ffmpeg -vcodec h264_qsv -i input.mp4 output.mp4</code></p>
+
+</article>
+
+
+
+</body>
+
+</html>

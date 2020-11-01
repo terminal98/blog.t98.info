@@ -6,7 +6,19 @@
     <description>Recent content in Posts on blog.t98.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 01 Nov 2020 14:43:40 +0900</lastBuildDate><atom:link href="https://blog.t98.info/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Nov 2020 15:30:05 +0900</lastBuildDate><atom:link href="https://blog.t98.info/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IntelのGPUでffmpegハードウェアエンコード</title>
+      <link>https://blog.t98.info/post/2020/20110102/</link>
+      <pubDate>Sun, 01 Nov 2020 15:30:05 +0900</pubDate>
+      
+      <guid>https://blog.t98.info/post/2020/20110102/</guid>
+      <description>なぜか勘違いしていたが、IntelのGPU Intel UHD Graphicsでもハードウェアエンコードはできる。ハードウェアエンコード=NVIDIAを使う記事ばかりヒットするので、NVIDIAのGPUが搭載されていないとハードウェアエンコードできないと勘違いしていたが、ちゃんとIntelのGPUでも可能だ。
+ffmpeg のエンコーダー・デコーダーの一覧に h264_qsv (Intel Quick Sync Video acceleration) があれば利用可能。無ければ、ffmpegのリビルドが必要とのこと。
+ffmpeg -encoders &amp;gt; encoders.txt
+V..... libx264 libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (codec h264) V..... libx264rgb libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 RGB (codec h264) V..... h264_amf AMD AMF H.264 Encoder (codec h264) V..... h264_nvenc NVIDIA NVENC H.264 encoder (codec h264) V..... h264_qsv H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (Intel Quick Sync Video acceleration) (codec h264) V.</description>
+    </item>
+    
     <item>
       <title>Windowsのバッチファイルで文字コードが違うプログラムを共存させるには文字コードをchcpで指定する</title>
       <link>https://blog.t98.info/post/2020/20110101/</link>
