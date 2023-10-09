@@ -47,8 +47,7 @@ chcpで文字コードの指定ができるようだ chcp というコマンド�
 chcp 932 echo ======================================================== echo テストプログラム v1.0 :start echo ======================================================== echo. set /P pause=&amp;#34;: 続行するには何かキーを押してください：&amp;#34; chcp 65001 ExampleCuiProgram chcp 932 echo プログラムが完了しました。 set /P pause=&amp;#34;: 終了するには何かキーを押してください：&amp;#34; chcp 932 がShift JIS、 chcp 65001 がUTF-8に対応します。その他の文字コードや、コマンドの使い方については、文字コードの設定(CHCP) | コマンドプロンプトの使い方 に載っていますので、参考にしてください。
 動作として、linuxのresetのような挙動で動きます。
 「テストプログラム」と、キーを押下させる指示を表示したあと、外部のCUIプログラムを呼び出すわけですが、この行が走ったあと、一旦出力がリセットされます。 CUIプログラムの処理が終わったら、また出力がリセットされて、「完了しました」表示がされます。
-  バッチファイルの文字コードは？: Windows Script Programming &amp;#x21a9;&amp;#xfe0e;
-   </description>
+バッチファイルの文字コードは？: Windows Script Programming&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
     </item>
     
   </channel>
