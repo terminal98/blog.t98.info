@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>【git】OneDriveのファイルをgitで管理するときはローカルにファイルをDLしないとエラーになる | blog.t98.info</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.120.4">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://blog.t98.info/css/index.css">
+<link rel="stylesheet" href="https://blog.t98.info/css/classes.css">
+<link rel="canonical" href="https://blog.t98.info/post/2023/23111901/">
+<link rel="alternate" type="application/rss+xml" href="" title="blog.t98.info">
+<script data-ad-client="ca-pub-1182967632880966" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+
+<header class="icons">
+  
+    <a href="https://blog.t98.info/">blog.t98.info</a>
+  
+  
+  
+</header>
+
+<article>
+  <header>
+    <h1>【git】OneDriveのファイルをgitで管理するときはローカルにファイルをDLしないとエラーになる</h1>
+    <time datetime="2023-11-19T15:13:50&#43;09:00">November 19, 2023</time>
+  </header>
+  <p>今までgitで管理してこなかったけれど、これから管理したいのでinstall commitしようとした。
+が、commitに追加しようとしても反応がない。しばらくして以下のようなエラーが出て結局コミットが作成できなかった。</p>
+<pre tabindex="0"><code>fatal: Unable to create &#39;…/.git/index.lock&#39;: File exists.
+</code></pre><p>index.lock というファイルがすでにあるのでコミットが作れないよ、というエラー。
+つまり、すでにプロセスが走っていてそれと重複して処理されておかしくならないようにロックされていますよ、ということである。</p>
+<hr>
+<p>環境をおさらいしておくと、以下のような感じとなっている。</p>
+<ul>
+<li>PC: MacBook Air (M2, 2022)</li>
+<li>エディタ: VSCode</li>
+<li>管理対象のファイルはOneDrive上にある。 <a href="https://support.microsoft.com/ja-jp/office/mac-%E7%94%A8-onedrive-%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-%E3%82%AA%E3%83%B3%E3%83%87%E3%83%9E%E3%83%B3%E3%83%89%E3%81%A7%E3%83%87%E3%82%A3%E3%82%B9%E3%82%AF%E9%A0%98%E5%9F%9F%E3%82%92%E7%AF%80%E7%B4%84%E3%81%99%E3%82%8B-529f6d53-e572-4922-a585-e7a318c135f0">ファイルオンデマンド機能</a> によりローカルにファイルはなかった</li>
+</ul>
+<p>「ファイルオンデマンド機能」が今回の原因。</p>
+<p>コミットするにあたって、gitのプロセスは当然それぞれのファイルを読み込む必要がある。
+ファイルオンデマンド機能は、使うときだけファイルをローカルに落とす機能。
+本来はファイルを開けば勝手にクラウドからダウンロードしてくれるのだが、コミット対象のファイル数が多かったのか、ダウンロード処理が走っていないようであった。</p>
+<p>そんなこんなで、ファイルとしてローカルにないけれども、あるように見せかけるので、うまく動かなかったというわけのようである。
+(「オンライン専用ファイル」という状態のままだったらしい。)</p>
+<p>ローカルにファイルを落とすには、Finderのファイル名の横にある「クラウドのマーク」を押下すればOK。</p>
+<p><img src="dl-button.webp" alt="DL button"></p>
+<p>これで問題なくコミットすることができた。めでたし。</p>
+
+</article>
+
+
+
+</body>
+
+</html>

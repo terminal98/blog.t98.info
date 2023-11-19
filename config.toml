@@ -1,5 +1,14 @@
 baseURL = "https://blog.t98.info/"
 publishDir = "docs"
-languageCode = "ja-jp"
+languageCode = "ja"
+defaultContentLanguage = "ja"
+hasCJKLanguage = true
 title = "blog.t98.info"
 theme = "contrast-hugo"
+
+buildDrafts = false
+buildFuture = false
+
+enableRobotsTXT = true
+
+enableGitInfo = true

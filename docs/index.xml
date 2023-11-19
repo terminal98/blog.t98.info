@@ -5,50 +5,36 @@
     <link>https://blog.t98.info/</link>
     <description>Recent content on blog.t98.info</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Mon, 23 Nov 2020 09:42:40 +0900</lastBuildDate><atom:link href="https://blog.t98.info/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language>
+    <lastBuildDate>Sun, 19 Nov 2023 15:13:50 +0900</lastBuildDate>
+    <atom:link href="https://blog.t98.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【git】OneDriveのファイルをgitで管理するときはローカルにファイルをDLしないとエラーになる</title>
+      <link>https://blog.t98.info/post/2023/23111901/</link>
+      <pubDate>Sun, 19 Nov 2023 15:13:50 +0900</pubDate>
+      <guid>https://blog.t98.info/post/2023/23111901/</guid>
+      <description>今までgitで管理してこなかったけれど、これから管理したいのでinstall commitしようとした。 が、commitに追加しようとしても反</description>
+    </item>
     <item>
       <title>Lenovo ideapadのキーボードが反応しなくなった</title>
       <link>https://blog.t98.info/post/2020/20112301/</link>
       <pubDate>Mon, 23 Nov 2020 09:42:40 +0900</pubDate>
-      
       <guid>https://blog.t98.info/post/2020/20112301/</guid>
-      <description>ideapad 330を使用しているが、時折Lenovo Vantageから降ってくるアップデートを適用した時に、内蔵キーボードが反応することがある。 しかも厄介なのが初期化しても症状は直らなかった点だ(個人設定を残すオプションをつけていたので完全クリーンインストールではないが)。
-現状把握 デバイスマネージャを見ると、キーボードのドライバ「ELAN Keyboard Filter」がエラーになっているようだ。おそらくプリインストールされたドライバなので再インストールするといった選択肢は出てこない。
-BluetoothやUSB接続のキーボードはなぜか使える。手元になければソフトウェアキーボードを使えば良い。タッチパネルでなくてもクリックで文字入力ができる。
-1. ドライバを消してみる Windowsの汎用ドライバを強制的に適用させれば直ることがあったので、今回もやってみたが、直らなかった。 手順としては、ドライバのアンインストールをソフトウェアごと行うだけだ。アンインストールしたらそのまま再起動すれば汎用ドライバが適用される。
-2. ドライバを置き換える これが確実なのではないかと思う。
-上の手順でドライバを一旦アンインストールした上で、再起動せず、Lenovoのホームページから「ELAN Keyboard Filter」のドライバインストールプログラムを落としてきて、実行する。 インストール完了後、再起動したところ、正常にキーボードが認識、入力できるようになった。
-ドライバ置き換え後、なぜか「ELAN Keyboard Filter」ではなく汎用ドライバが適用されていた。
-とにかく直ったので良かった。</description>
+      <description>ideapad 330を使用しているが、時折Lenovo Vantageから降ってくるアップデートを適用した時に、内蔵キーボードが反応することがある。 しかも</description>
     </item>
-    
     <item>
       <title>IntelのGPUでffmpegハードウェアエンコード</title>
       <link>https://blog.t98.info/post/2020/20110102/</link>
       <pubDate>Sun, 01 Nov 2020 15:30:05 +0900</pubDate>
-      
       <guid>https://blog.t98.info/post/2020/20110102/</guid>
-      <description>ハードウェアエンコード=NVIDIAを使う記事ばかりヒットするので、NVIDIAのGPUが搭載されていないとハードウェアエンコードできないと勘違いしていたが、、IntelのGPU Intel UHD Graphicsでもハードウェアエンコードはできる。
-ffmpeg のエンコーダー・デコーダーの一覧に h264_qsv (Intel Quick Sync Video acceleration) があれば利用可能。無ければ、ffmpegのリビルドが必要とのこと。
-ffmpeg -encoders &amp;gt; encoders.txt
-V..... libx264 libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (codec h264) V..... libx264rgb libx264 H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 RGB (codec h264) V..... h264_amf AMD AMF H.264 Encoder (codec h264) V..... h264_nvenc NVIDIA NVENC H.264 encoder (codec h264) V..... h264_qsv H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10 (Intel Quick Sync Video acceleration) (codec h264) V.</description>
+      <description>ハードウェアエンコード=NVIDIAを使う記事ばかりヒットするので、NVIDIAのGPUが搭載されていないとハードウェアエンコードできないと</description>
     </item>
-    
     <item>
       <title>Windowsのバッチファイルで文字コードが違うプログラムを共存させるには文字コードをchcpで指定する</title>
       <link>https://blog.t98.info/post/2020/20110101/</link>
       <pubDate>Sun, 01 Nov 2020 14:43:40 +0900</pubDate>
-      
       <guid>https://blog.t98.info/post/2020/20110101/</guid>
-      <description>文字化けしていたのが気になっていた バッチファイルから外部CUIプログラムを呼び出す際、内部文字コードがUTF-8のものの場合、文字化けが発生することがあります。
-それなら、バッチファイルの文字コードをUTF-8にすれば解決するのではと思いましたが、逆にバッチファイルが文字化けしてしまいました。 日本語環境のWindowsで動かすバッチファイルは、原則Shift JISであるべきだからのようです1。
-chcpで文字コードの指定ができるようだ chcp というコマンドを使うことで、文字コードの指定ができるようです。 試しに、外部プログラムを呼び出す直線直後をUTF-8、それ以外をShift JISにするようにしてみました…。
-chcp 932 echo ======================================================== echo テストプログラム v1.0 :start echo ======================================================== echo. set /P pause=&amp;#34;: 続行するには何かキーを押してください：&amp;#34; chcp 65001 ExampleCuiProgram chcp 932 echo プログラムが完了しました。 set /P pause=&amp;#34;: 終了するには何かキーを押してください：&amp;#34; chcp 932 がShift JIS、 chcp 65001 がUTF-8に対応します。その他の文字コードや、コマンドの使い方については、文字コードの設定(CHCP) | コマンドプロンプトの使い方 に載っていますので、参考にしてください。
-動作として、linuxのresetのような挙動で動きます。
-「テストプログラム」と、キーを押下させる指示を表示したあと、外部のCUIプログラムを呼び出すわけですが、この行が走ったあと、一旦出力がリセットされます。 CUIプログラムの処理が終わったら、また出力がリセットされて、「完了しました」表示がされます。
-バッチファイルの文字コードは？: Windows Script Programming&amp;#160;&amp;#x21a9;&amp;#xfe0e;</description>
+      <description>文字化けしていたのが気になっていた バッチファイルから外部CUIプログラムを呼び出す際、内部文字コードがUTF-8のものの場合、文字化けが発生</description>
     </item>
-    
   </channel>
 </rss>
