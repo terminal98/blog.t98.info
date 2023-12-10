@@ -1,5 +1,5 @@
 ---
-title: "【git】OneDriveのファイルをgitで管理するときはローカルにファイルをDLしないとエラーになる"
+title: "OneDriveのファイルをgitで管理するときはローカルにファイルをDLしないとエラーになる"
 date: 2023-11-19T15:13:50+09:00
 draft: false
 ---
