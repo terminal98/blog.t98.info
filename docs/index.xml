@@ -1,40 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog.t98.info</title>
+    <title>homu tec.</title>
     <link>https://blog.t98.info/</link>
-    <description>Recent content on blog.t98.info</description>
+    <description>Recent content on homu tec.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 19 Nov 2023 15:13:50 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2024 18:43:48 +0900</lastBuildDate>
     <atom:link href="https://blog.t98.info/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>051201</title>
+      <link>https://blog.t98.info/post/2024/051201/</link>
+      <pubDate>Sun, 12 May 2024 18:43:48 +0900</pubDate>
+      <guid>https://blog.t98.info/post/2024/051201/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>OneDriveのファイルをgitで管理するときはローカルにファイルをDLしないとエラーになる</title>
-      <link>https://blog.t98.info/post/2023/23111901/</link>
+      <link>https://blog.t98.info/post/2023/111901/</link>
       <pubDate>Sun, 19 Nov 2023 15:13:50 +0900</pubDate>
-      <guid>https://blog.t98.info/post/2023/23111901/</guid>
+      <guid>https://blog.t98.info/post/2023/111901/</guid>
       <description>今までgitで管理してこなかったけれど、これから管理したいのでinstall commitしようとした。 が、commitに追加しようとしても反</description>
     </item>
     <item>
       <title>Lenovo ideapadのキーボードが反応しなくなった</title>
-      <link>https://blog.t98.info/post/2020/20112301/</link>
+      <link>https://blog.t98.info/post/2020/112301/</link>
       <pubDate>Mon, 23 Nov 2020 09:42:40 +0900</pubDate>
-      <guid>https://blog.t98.info/post/2020/20112301/</guid>
+      <guid>https://blog.t98.info/post/2020/112301/</guid>
       <description>ideapad 330を使用しているが、時折Lenovo Vantageから降ってくるアップデートを適用した時に、内蔵キーボードが反応することがある。 しかも</description>
     </item>
     <item>
       <title>IntelのGPUでffmpegハードウェアエンコード</title>
-      <link>https://blog.t98.info/post/2020/20110102/</link>
+      <link>https://blog.t98.info/post/2020/110102/</link>
       <pubDate>Sun, 01 Nov 2020 15:30:05 +0900</pubDate>
-      <guid>https://blog.t98.info/post/2020/20110102/</guid>
+      <guid>https://blog.t98.info/post/2020/110102/</guid>
       <description>ハードウェアエンコード=NVIDIAを使う記事ばかりヒットするので、NVIDIAのGPUが搭載されていないとハードウェアエンコードできないと</description>
     </item>
     <item>
       <title>Windowsのバッチファイルで文字コードが違うプログラムを共存させるには文字コードをchcpで指定する</title>
-      <link>https://blog.t98.info/post/2020/20110101/</link>
+      <link>https://blog.t98.info/post/2020/110101/</link>
       <pubDate>Sun, 01 Nov 2020 14:43:40 +0900</pubDate>
-      <guid>https://blog.t98.info/post/2020/20110101/</guid>
+      <guid>https://blog.t98.info/post/2020/110101/</guid>
       <description>文字化けしていたのが気になっていた バッチファイルから外部CUIプログラムを呼び出す際、内部文字コードがUTF-8のものの場合、文字化けが発生</description>
+    </item>
+    <item>
+      <title>このブログについて</title>
+      <link>https://blog.t98.info/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://blog.t98.info/about/</guid>
+      <description>このブログは、主に技術系の分野において、エラー等により詰まったことと、それの解決に至った手順などを備忘録として残しているものです。 お問い合わ</description>
     </item>
   </channel>
 </rss>

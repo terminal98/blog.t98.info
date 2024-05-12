@@ -3,7 +3,7 @@ publishDir = "docs"
 languageCode = "ja"
 defaultContentLanguage = "ja"
 hasCJKLanguage = true
-title = "blog.t98.info"
+title = "homu tec."
 theme = "contrast-hugo"
 
 buildDrafts = false
@@ -12,3 +12,10 @@ buildFuture = false
 enableRobotsTXT = true
 
 enableGitInfo = true
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
