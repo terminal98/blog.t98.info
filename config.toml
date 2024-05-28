@@ -9,7 +9,7 @@ theme = "contrast-hugo"
 buildDrafts = false
 buildFuture = false
 
-enableRobotsTXT = true
+enableRobotsTXT = false
 
 enableGitInfo = true
 
