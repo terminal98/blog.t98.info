@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<title>HTTPプロキシ必須なWi-FiではChromeのセキュアDNSをオフにする | homu tec.</title>
+<meta charset="utf-8">
+<meta name="generator" content="Hugo 0.128.2">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://blog.t98.info/css/index.css">
+<link rel="stylesheet" href="https://blog.t98.info/css/classes.css">
+<link rel="canonical" href="https://blog.t98.info/post/2024/071301/">
+<link rel="alternate" type="application/rss+xml" href="" title="homu tec.">
+<script data-ad-client="ca-pub-1182967632880966" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+
+<header class="icons">
+  
+    <a href="https://blog.t98.info/">homu tec.</a>
+  
+  
+    <nav>
+    
+      <a href="/about/" >
+        
+          About
+        
+      </a>
+    
+    </nav>
+  
+  
+</header>
+
+<article>
+  <header>
+    <h1>HTTPプロキシ必須なWi-FiではChromeのセキュアDNSをオフにする</h1>
+    <time datetime="2024-07-13T15:06:51&#43;09:00">July 13, 2024</time>
+  </header>
+  <p>MacでWi-Fiを使おうと接続したがインターネットに繋がらない。
+HTTPプロキシの設定が必須なようなので、設定しても繋がらない。
+<code>ERR_PROXY_CONNECTION_FAILED</code> エラーが出る。</p>
+<p>iPhoneでは問題なくつながる。
+MacのGoogle Chromeではダメだったが、Safariではつながるようだった。</p>
+<p>ファイアウォールの設定やプロキシ設定の見直しなど見直したがどれもダメ。
+Safariではつながるので、Chrome側の設定に問題があると判断。</p>
+<p>よ〜く設定を見てみると、「<a href="https://developers-jp.googleblog.com/2020/06/secure-dns.html">セキュアDNSを使用する</a>」という項目が有効になっていた。
+無効化したところ、問題なく接続できるようになった。</p>
+<p><img src="071301001.png" alt="secure dns settings"></p>
+<p>「セキュアDNSを使用する」は、ChromeがWebサイトにアクセスする時、Google Public DNS などの暗号化されたDNSを使うようにするための設定。Wi-FiやプロキシとDNSの相性が悪かったのかもしれない。</p>
+
+</article>
+
+
+
+</body>
+
+</html>
