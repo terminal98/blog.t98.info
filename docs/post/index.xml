@@ -13,42 +13,42 @@
       <link>https://blog.t98.info/post/2024/071301/</link>
       <pubDate>Sat, 13 Jul 2024 15:06:51 +0900</pubDate>
       <guid>https://blog.t98.info/post/2024/071301/</guid>
-      <description>MacでWi-Fiを使おうと接続したがインターネットに繋がらない。 HTTPプロキシの設定が必須なようなので、設定しても繋がらない。 ERR_PROXY_CONNECTION_FAILED エラーが</description>
+      <description>&lt;p&gt;MacでWi-Fiを使おうと接続したがインターネットに繋がらない。&#xA;HTTPプロキシの設定が必須なようなので、設定しても繋がらない。&#xA;&lt;code&gt;ERR_PROXY_CONNECTION_FAILED&lt;/code&gt; エラーが出る。&lt;/p&gt;</description>
     </item>
     <item>
       <title>同人サークルがauPAY加盟店になったレポ</title>
       <link>https://blog.t98.info/post/2024/051201/</link>
       <pubDate>Sun, 12 May 2024 18:43:48 +0900</pubDate>
       <guid>https://blog.t98.info/post/2024/051201/</guid>
-      <description>こんにちは、同人サークル にじてくとです。 にじてくとは、コミックマーケットなどの同人即売会等において、 自主制作した同人誌及び同人グッズを頒布す</description>
+      <description>&lt;p&gt;こんにちは、同人サークル &lt;a href=&#34;https://cp.t98.info/&#34;&gt;にじてくと&lt;/a&gt;です。&lt;/p&gt;&#xA;&lt;p&gt;にじてくとは、コミックマーケットなどの同人即売会等において、&#xA;自主制作した同人誌及び同人グッズを頒布するサークルです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>OneDrive上のファイルをgit管理したらエラーが出た</title>
       <link>https://blog.t98.info/post/2023/111901/</link>
       <pubDate>Sun, 19 Nov 2023 15:13:50 +0900</pubDate>
       <guid>https://blog.t98.info/post/2023/111901/</guid>
-      <description>今までgitで管理してこなかったけれど、これから管理したいのでinstall commitしようとした。 が、commitに追加しようとしても反</description>
+      <description>&lt;p&gt;今までgitで管理してこなかったけれど、これから管理したいのでinstall commitしようとした。&#xA;が、commitに追加しようとしても反応がない。しばらくして以下のようなエラーが出て結局コミットが作成できなかった。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lenovo ideapadのキーボードが反応しなくなった</title>
       <link>https://blog.t98.info/post/2020/112301/</link>
       <pubDate>Mon, 23 Nov 2020 09:42:40 +0900</pubDate>
       <guid>https://blog.t98.info/post/2020/112301/</guid>
-      <description>ideapad 330を使用しているが、時折Lenovo Vantageから降ってくるアップデートを適用した時に、内蔵キーボードが反応することがある。 しかも</description>
+      <description>&lt;p&gt;ideapad 330を使用しているが、時折Lenovo Vantageから降ってくるアップデートを適用した時に、内蔵キーボードが反応することがある。&#xA;しかも厄介なのが初期化しても症状は直らなかった点だ(個人設定を残すオプションをつけていたので完全クリーンインストールではないが)。&lt;/p&gt;</description>
     </item>
     <item>
       <title>IntelのGPUでffmpegハードウェアエンコード</title>
       <link>https://blog.t98.info/post/2020/110102/</link>
       <pubDate>Sun, 01 Nov 2020 15:30:05 +0900</pubDate>
       <guid>https://blog.t98.info/post/2020/110102/</guid>
-      <description>ハードウェアエンコード=NVIDIAを使う記事ばかりヒットするので、NVIDIAのGPUが搭載されていないとハードウェアエンコードできないと</description>
+      <description>&lt;p&gt;ハードウェアエンコード=NVIDIAを使う記事ばかりヒットするので、NVIDIAのGPUが搭載されていないとハードウェアエンコードできないと勘違いしていたが、、IntelのGPU &lt;code&gt;Intel UHD Graphics&lt;/code&gt;でもハードウェアエンコードはできる。&lt;/p&gt;</description>
     </item>
     <item>
       <title>バッチで外部プログラムを呼び出すと文字化けするときの対処</title>
       <link>https://blog.t98.info/post/2020/110101/</link>
       <pubDate>Sun, 01 Nov 2020 14:43:40 +0900</pubDate>
       <guid>https://blog.t98.info/post/2020/110101/</guid>
-      <description>文字化けしていたのが気になっていた バッチファイルから外部CUIプログラムを呼び出す際、内部文字コードがUTF-8のものの場合、文字化けが発生</description>
+      <description>&lt;h2 id=&#34;文字化けしていたのが気になっていた&#34;&gt;文字化けしていたのが気になっていた&lt;/h2&gt;&#xA;&lt;p&gt;バッチファイルから外部CUIプログラムを呼び出す際、内部文字コードがUTF-8のものの場合、文字化けが発生することがあります。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
